@@ -44,8 +44,8 @@ class Concentration {
             // OR
             // cards += [card, card]
             
-            // TODO: Shuffle the cards
-            // HOME WORK
+            // Shuffle the cards
+            // Other Options for shuffling: https://learnappmaking.com/shuffling-array-swift-explained/
             for _ in cards.indices {
                 cards.sort { (_,_) in arc4random() < arc4random() }
             }
