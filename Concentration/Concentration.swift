@@ -15,11 +15,6 @@ class Concentration {
     var indexOfOneAndOnlyFaceUpCard: Int?
     
     func chooseCard(at index: Int) {
-//        if cards[index].isFaceUp {
-//            cards[index].isFaceUp = false
-//        } else {
-//            cards[index].isFaceUp = true
-//        }
         if !cards[index].isMatched {
             if let matchIndex = indexOfOneAndOnlyFaceUpCard, matchIndex != index {
                 // Check if Cards Match
@@ -51,6 +46,9 @@ class Concentration {
             
             // TODO: Shuffle the cards
             // HOME WORK
+            for _ in cards.indices {
+                cards.sort { (_,_) in arc4random() < arc4random() }
+            }
         }
        
     }
